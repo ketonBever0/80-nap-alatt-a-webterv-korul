@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Választás</title>
+    <link rel="stylesheet" href="../CSS/menet.css">
+    <title>Számolás</title>
 </head>
 
 <body>
@@ -26,23 +27,23 @@
     </header>
 
     <main>
-        <form action="szamolas.php" method="POST">
 
-            <label for="oktato">Oktató:</label>
-            <select name="oktato" id="oktato">
-                <option value="null" disabled selected>Válassz</option>
-                <option value="GerTom">GerTom</option>
-                <option value="Miki">Miki</option>
+        <h2>
+            Szó:
+        </h2>
 
-            </select>
-            <br>
-            <label for="word">Szó(fordulat):</label>
-            <input type="text" id="word">
+        <div id="boxcontainer">
+            <div class="timebox">
+                <p>1: 0:05:00</p>
+                <p>Ebből a szempontból</p>
+            </div>
 
-            <br>
-            <input type="submit" value="Kezdés">
+        </div>
 
-        </form>
+        <p id="time">0:05:13</p>
+
+        <button>Vége</button>
+
     </main>
 
 
