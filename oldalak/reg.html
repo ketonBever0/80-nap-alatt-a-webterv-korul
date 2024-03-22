@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../CSS/reg.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../JS/atvaltos.js"></script>
+    </head>
+    <body>
+        <header>
+            <img id="logo"></img>
+            <nav>
+                <ul id="opcio">
+                    <li>Felvitel</li>
+                    <li>Korábbiak</li>
+                    <li>Statisztikák</li>
+                </ul>
+                <ul id="bejelentkezos">
+                    <li>Regisztráció</li>
+                    <li>Bejelentkezés</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="reg">
+                <h2 id="cim">Regiszráció</h2>
+                <form action="regist" method="post">
+                    <article class="be">
+                        <label>Felhasználónév</label>
+                        <br>
+                        <input type="text">
+                    </article>
+                    <article class="be">
+                        <label>Neptunkód</label>
+                        <br>
+                        <input type="text" id="valami">
+                    </article>
+                
+                    <article class="be">
+                        <label>Jelszó</label>
+                        <br>
+                        <input type="password">
+                    </article>
+                    <article class="be">
+                        <label>Jelszó újra</label>
+                        <br>
+                        <input type="password">
+                    </article>
+                    <article class="be">
+                        <input type="submit" class="gomb">
+                    </article>
+                    <article class="be atvaltos" onclick=regToBej()>Van már fiókod? Jelenkezz be!</article>
+                </form>
+            </section>
+            <section id="bej">
+                <h2 id="cim">Bejelentkezés</h2>
+                <form action="bej" method="post">
+                    <article class="be">
+                        <label>Felhasználónév</label>
+                        <br>
+                        <input type="text">
+                    </article>
+                    <article class="be">
+                        <label>Jelszó</label>
+                        <br>
+                        <input type="password">
+                    </article>
+                    <article class="be">
+                        <input type="submit" class="gomb">
+                    </article>
+                    <article class="be atvaltos" onclick=bejToReg()>Nincs még fiókod? Regisztrálj!</article>
+            </section>
+        </main>
+    </body>
+</html>
