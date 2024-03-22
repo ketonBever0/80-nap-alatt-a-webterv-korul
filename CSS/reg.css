@@ -55,16 +55,18 @@ input[type="submit"]{
 
 #reg{
     display: none;
+    background-color: rgb(76, 141, 10);
 }
 
-/*@media only screen and (max-width: 768px) {
-    #cim{
+@media only screen and (max-width: 768px) {
+    /*#cim{
         color: yellow;
-    }
+    }*/
 
-    body{
-        background-color: aqua;
+    section{
+         width: 90vw;
     }
+   
 
     
-}*/
+}
