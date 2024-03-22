@@ -1,0 +1,26 @@
+#boxcontainer {
+    margin: 30px auto;
+    width: 20%;
+}
+
+.timebox {
+    background-color: darkmagenta;
+    color: white;
+    width: 5rem;
+    padding: 15px 40px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+#time {
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    display: block;
+    margin: auto;
+}
