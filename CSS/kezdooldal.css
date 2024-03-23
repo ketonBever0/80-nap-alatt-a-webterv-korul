@@ -1,0 +1,10 @@
+main{
+    padding: 20px;
+}
+
+p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
