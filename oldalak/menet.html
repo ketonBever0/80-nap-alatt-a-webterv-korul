@@ -15,7 +15,7 @@
     <header>
         <img id="logo" title="LOGO" alt="LOGO" src="/img/logo.webp"></img>
         <nav>
-            <ul id="hambi">
+            <ul id="hambi" onclick=nyisdKi()>
                 <li id="hambiM">
                     <div class="hambiMenu"></div>
                     <div class="hambiMenu"></div>
@@ -23,12 +23,25 @@
                 </li>
             </ul> 
             <ul id="opcio">
-                <li class="link"><a href="/index.html">Kezdőlap</a></li>
+                <li id="hambiKinyitva">
+                    <ul id="hambi2" onclick=csukdBe()>
+                        <li id="hambiM">
+                            <div class="hambiMenu" id="felso"></div>
+                            <div class="hambiMenu" id="kozep"></div>
+                            <div class="hambiMenu" id="also"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="link"><a href="#">Kezdőlap</a></li>
                 <li class="link"><a>Felvitel</a></li>
                 <li class="link"><a>Korábbiak</a></li>
                 <li class="link"><a>Statisztikák</a></li>
                 <li id="bejelentkezes" class="link"><a href="/oldalak/reg.html">Belépés</a></li>
             </ul>
+            <!--<ul id="bejelentkezos">
+                <li><a class="link">Regisztráció</a></li>
+                <li><a class="link">Bejelentkezés</a></li>
+            </ul>-->
         </nav>
     </header>
 

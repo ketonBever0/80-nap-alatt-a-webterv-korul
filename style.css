@@ -17,7 +17,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 3;
-    width: 100vw;
+    /*width: 100vw;*/
 }
 
 nav{
@@ -88,7 +88,7 @@ a{
 .hambiMenu {
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: white;
     margin: 6px 0;
 }
 
@@ -97,7 +97,7 @@ a{
     margin-bottom: auto;
     /*background-color: aqua;*/
     margin-left: auto;
-    margin-right: 20px;
+    /*margin-right: 20px;*/
     display: none;
 }
 
@@ -109,9 +109,48 @@ a{
     }*/
     #opcio{
         display: none;
+        background-color: brown;
+        height: 100vh;
+        margin: 0;
+        width: 50vw;
+        margin-left: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+        /*padding-top: 10px;*/
+        
     }
 
     #hambi{
         display: block;
+        /*padding: 15px 8px;*/
+    }
+
+    #hambi2{
+        padding: 15px 8px;
+    }
+
+    #bejelentkezes{
+        text-align: left;
+        /*margin-left: auto;*/
+        /*padding: 15px 8px;
+        cursor: pointer;
+        border-radius: 10px;*/
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    #kozep{
+        opacity: 0;
+    }
+
+    #felso{
+        rotate: 45deg;
+        translate: 0px,-11px;
+    }
+
+    #also{
+        rotate: -45deg;
+        translate: 0px,11px;
     }
 }
