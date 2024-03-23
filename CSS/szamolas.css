@@ -1,27 +1,54 @@
 #boxcontainer {
     margin: 30px auto;
-    width: 20%;
+    /* width: 20%; */
 }
 
 .timebox {
-    background-color: darkmagenta;
+    background-color: darkorchid;
     color: white;
     width: 5rem;
     padding: 15px 40px;
-    margin: auto;
+    margin: 10px auto;
+    border-radius: 40px;
 }
 
 h2 {
     text-align: center;
 }
 
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: brown;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 #time {
     text-align: center;
     margin-bottom: 20px;
+    color: white;
+    font-size: 16pt;
 }
 
-button {
+#addbtn {
     margin-top: 20px;
     display: block;
     margin: auto;
+    background-color: blue;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 30px;
 }
+
+#addtitle { 
+    font-weight: bold;
+    font-size: large;
+}
+
+.plusicon {
+    line-height: 30px;
+    font-size: large;
+}
+
