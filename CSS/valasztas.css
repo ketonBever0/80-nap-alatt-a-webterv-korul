@@ -1,9 +1,46 @@
-section {
+/* section {
     display: block;
-    
     margin: auto;
-    width: 50%;
 
+} */
+
+#formcontainer, section {
+    display: block;
+    margin: auto;
+    /* width: 50vw; */
 }
 
+form {
+    /* text-align: center; */
+    padding: auto;
+}
+
+input, select
+{
+    background-color: azure;
+    border-radius: 20px;
+    height: 30px;
+    font-size: medium;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 10px;
+    width: 15rem;
+}
+
+
+input[type=submit] {
+    margin: 20px, auto;
+    width: 5rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /*#cim{
+        color: yellow;
+    }*/
+
+    #formcontainer, section {
+         width: 90vw;
+    }
+}
 
