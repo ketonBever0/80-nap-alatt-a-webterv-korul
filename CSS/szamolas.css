@@ -6,8 +6,12 @@ main {
     display: none;
 }
 
+/* #title-word {
+    color: green;
+} */
+
 #boxcontainer {
-    margin: 30px auto;
+    margin: 2rem auto 12rem auto;
     /* width: 20%; */
 }
 
@@ -21,9 +25,16 @@ main {
     /* text-align: center; */
 }
 
-.timebox p:last-child {
+.timebox p:first-child {
+    /* text-align: center; */
+    font-size: larger;
+    margin-bottom: 4px;
+}
+
+.timebox p {
     text-align: center;
 }
+
 
 h2 {
     text-align: center;
@@ -32,6 +43,7 @@ h2 {
 #footer {
     display: none;
     position: sticky;
+    /* width: 100vw; */
     bottom: 0px;
     background-color: brown;
     padding: 10px;
@@ -65,4 +77,10 @@ h2 {
 .plusicon {
     line-height: 30px;
     font-size: large;
+}
+
+#scroller {
+    /* display: none; */
+    height: 4rem;
+
 }

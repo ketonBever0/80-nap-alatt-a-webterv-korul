@@ -49,7 +49,7 @@ const handleInputChange = (e) => {
     [e.target.name]: e.target.value,
   };
 
-  console.log(data);
+  // console.log(data);
 };
 
 const startCounting = (e) => {
@@ -81,12 +81,20 @@ var wordCount = 0;
 const addCount = () => {
   wordCount++;
 
+  var now = new Date();
+
   document.getElementById("boxcontainer").innerHTML += `
-                <div class="timebox">
-                    <p><b>${wordCount}</b>. ${hours}:${
+  <div class="timebox">
+      <p id="current-time">${now.getHours()}:${now.getMinutes() < 10 ? `0${now.getMinutes()}` : now.getMinutes()}:${now.getSeconds() < 10 ? `0${now.getSeconds()}` : now.getSeconds()}.${Math.round(now.getMilliseconds() / 100, 1)}</p>
+      <p><b>${wordCount}</b>. ${hours}:${
     minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds}.${ts}</p>
-                    <p>${data.word}</p>
-                </div>`;
-//   document.getElementById("scroller").scrollIntoView({ behavior: "smooth" });
+      <p>${data.word}</p>
+  </div>
+`;
+// itt feljebb template stringeket használtam, valamint ha a percek és a másodpercek kevesebbek 10-nél, eléjük ír egy 0-t
+
+  document
+    .getElementById("scroller")
+    .scrollIntoView({ behavior: "smooth", block: "end" });
 };
