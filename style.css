@@ -161,4 +161,9 @@ a{
         rotate: -45deg;
         translate: 0px,11px;
     }
+
+    .mobilLink{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
 }
