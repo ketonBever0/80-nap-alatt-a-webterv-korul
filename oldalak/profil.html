@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../CSS/profil.css">
+    </head>
+    <body>
+        <header>
+            <img id="logo" title="LOGO" alt="LOGO" src="../img/logo.webp"></img>
+            <nav>
+                <ul id="hambi" onclick=nyisdKi()>
+                    <li id="hambiM">
+                        <div class="hambiMenu"></div>
+                        <div class="hambiMenu"></div>
+                        <div class="hambiMenu"></div>
+                    </li>
+                </ul>
+                <ul id="opcio">
+                    <li id="hambiKinyitva">
+                        <ul id="hambi2" onclick=csukdBe()>
+                            <li id="hambiM">
+                                <div class="hambiMenu" id="felso"></div>
+                                <div class="hambiMenu" id="kozep"></div>
+                                <div class="hambiMenu" id="also"></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobilLink"><a class="link" href="../index.html">Kezdőlap</a></li>
+                    <li class="mobilLink"><a class="link" href="./szoszamolas.html">Felvitel</a></li>
+                    <li class="mobilLink"><a class="link">Korábbiak</a></li>
+                    <li class="mobilLink"><a class="link">Statisztikák</a></li>
+                    <li class="mobilLink" id="bejelentkezes"><a class="link" href="./reg.html">Belépés</a></li>
+                    <li class="mobilLink" id="profil"><a class="link" href="./profil.html">Profil</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="profil">
+                <article id="profilkepMegjelenes">
+                    <img id="profilkep" src="../img/profilpelda.webp" alt="">
+                </article>
+                <article id="profilAdatok">
+                    <table id="pat">
+                        <tbody>
+                            <tr>
+                                <th>Felhasználónév</th>
+                                <td>robert1022</td>
+                            </tr>
+                            <tr>
+                                <th>Neptunkód</th>
+                                <td>Y7BRWS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+            <section id="szerkesztos">
+                <article id="jelszovalt">
+                    <form action="" method="post" enctype="application/x-www-form-urlencoded">
+                        <label for="jel"></label>
+                        <input type="password" name="jelszo" id="jel" placeholder="Új jelszó">
+                        <br>
+                        <label for="jel2"></label>
+                        <input type="password" name="jelszo" id="jel2"  placeholder="Új jelszó újra">
+                        <br>
+                        <input type="submit" value="Jelszó módosítása"></button>
+                    </form>
+                </article>
+                <article id="profilkepModositas">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <input type="file" id="kepf">
+                        <input type="submit" value="Profilkép módosítása">
+                    </form>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

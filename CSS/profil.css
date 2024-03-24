@@ -1,0 +1,57 @@
+input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+
+}
+
+input{
+    background-color: azure;
+    border-radius: 20px;
+    height: 30px;
+    font-size: medium;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+section{
+    width: 50vw;
+}
+
+main{
+    display: flex;
+}
+
+/*Az article-ök alapértelmezett színe a barna,
+s a többi article egyenként van átszínezve id szelektorok által*/
+article{
+    background-color: brown;
+    margin:20px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+#profilkepModositas{
+    background-color: gold;
+}
+
+#profilkepMegjelenes{
+    text-align: center;
+    background-color: darkred;
+}
+
+#profilkep{
+    border-radius: 100%;
+    width: 30vw;
+}
+
+#profilAdatok{
+    background-color: chocolate;
+}
+
+th, td{
+    width: calc(25vw - 10px);
+    text-align: left;
+}
+
