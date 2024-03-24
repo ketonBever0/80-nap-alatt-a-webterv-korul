@@ -57,12 +57,14 @@
 
                 <article>
                     <label for="educator">Oktató:</label><br>
-                    <select required id="educator" name="educator" onchange={handleInputChange(event)}>
+                    <!-- <select required id="educator" name="educator" onchange={handleInputChange(event)}>
                         <option value="" disabled selected>Válassz</option>
                         <option value="GerTom">GerTom</option>
                         <option value="Dr. Kató Zoltán">Dr. Kató Zoltán</option>
     
-                    </select>
+                    </select> -->
+
+                    <input type="text" required id="educator" name="educator" onchange={handleInputChange(event)}>
 
 
 
@@ -132,6 +134,17 @@
             <span id="scroller">&#8203;</span>
         </article>
 
+
+        <!-- <article id="summary">
+
+            <h2 id="sumtitle">&#8203;</h2>
+
+
+
+
+
+        </article> -->
+
     </main>
 
     <footer id="footer">
@@ -147,6 +160,10 @@
         <span id="addtitle">&#8203;</span>
         <br>
         <span class="plusicon">+</span>
+    </button>
+
+    <button id="stopbtn" onclick={stopTimer()}>
+        Vége
     </button>
 
     </footer>

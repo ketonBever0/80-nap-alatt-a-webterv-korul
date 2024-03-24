@@ -1,10 +1,18 @@
-var onCounting = false;
+// var onCounting = false;
 
 // if (onCounting) {
 //   window.onbeforeunload = () => {
 //     return "";
 //   };
 // }
+
+window.onload = () => {
+  window.scrollTo(0, 0);
+};
+
+const addZero = (val) => {
+  return val < 10 ? `0${val}` : val;
+};
 
 var ts = 0;
 var seconds = 0;
@@ -77,24 +85,81 @@ const startCounting = (e) => {
 };
 
 var wordCount = 0;
+// var difs = [];
+
+var realTimes = [];
+var stopwatchTimes = [];
 
 const addCount = () => {
   wordCount++;
-
   var now = new Date();
 
+  var nowStr = `${now.getHours()}:${addZero(now.getMinutes())}:${addZero(
+    now.getSeconds()
+  )}.${Math.floor(now.getMilliseconds() / 100, 1)}`;
+
+  realTimes.push(nowStr);
+
+  var stopwatch = `${hours}:${addZero(minutes)}:${addZero(seconds)}.${ts}`;
+
+  stopwatchTimes.push(stopwatch);
+
   document.getElementById("boxcontainer").innerHTML += `
-  <div class="timebox">
-      <p id="current-time">${now.getHours()}:${now.getMinutes() < 10 ? `0${now.getMinutes()}` : now.getMinutes()}:${now.getSeconds() < 10 ? `0${now.getSeconds()}` : now.getSeconds()}.${Math.round(now.getMilliseconds() / 100, 1)}</p>
-      <p><b>${wordCount}</b>. ${hours}:${
-    minutes < 10 ? `0${minutes}` : minutes
-  }:${seconds < 10 ? `0${seconds}` : seconds}.${ts}</p>
-      <p>${data.word}</p>
-  </div>
+    <div class="timebox">
+        <p id="current-time">${nowStr}</p>
+        <p><b>${wordCount}</b>. ${stopwatch}</p>
+        <p>${data.word}</p>
+    </div>
 `;
-// itt feljebb template stringeket használtam, valamint ha a percek és a másodpercek kevesebbek 10-nél, eléjük ír egy 0-t
+  // itt feljebb template stringeket használtam, valamint ha a percek és a másodpercek kevesebbek 10-nél, eléjük ír egy 0-t
 
   document
     .getElementById("scroller")
     .scrollIntoView({ behavior: "smooth", block: "end" });
+};
+
+const stopTimer = () => {
+  // document.getElementById("oncounting").style.display = "none";
+  document.getElementById("footer").style.display = "none";
+
+  document.getElementById("boxcontainer").innerHTML += `
+    <h2 id="sumtitle">${data.educator} ${wordCount}x mondta, hogy: ${data.word}</h2>
+    <button id="savebtn" onclick={download()}>
+        Letöltés
+    </button>
+    <button id="resetbtn" onclick={reset()}>
+        Újra
+    </button>
+  `;
+
+  clearInterval(timer);
+};
+
+const download = () => {
+  const now = new Date();
+  var csv = "Valós idő;Stopper idő\n";
+
+  for (let i = 0; i < wordCount; i++) {
+    csv += `${realTimes[i]};${stopwatchTimes[i]}\n`;
+  }
+
+  csv += `Összesen:;${wordCount}\n`;
+
+  const blob = new Blob([csv], { type: "text/csv" });
+  const link = document.createElement("a");
+  link.href = window.URL.createObjectURL(blob);
+  link.download = `${data.educator}-${data.word}_${now.getFullYear()}-${addZero(
+    now.getMonth()
+  )}-${addZero(now.getDate())}-${addZero(now.getHours())}${addZero(
+    now.getMinutes()
+  )}.csv`;
+  link.click();
+};
+
+const reset = () => {
+  // document
+  //   .getElementById("title-educator")
+  //   .scrollIntoView({ behavior: "smooth" });
+
+  location.reload();
 };
