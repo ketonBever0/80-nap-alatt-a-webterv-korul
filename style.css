@@ -105,6 +105,21 @@ a{
     display: none;
 }
 
+footer{
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    color: white;
+}
+
+#labszoveg{
+    /*background: black;*/
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 764px) {
     
 
@@ -163,5 +178,20 @@ a{
     .mobilLink{
         margin-top: 30px;
         margin-bottom: 20px;
+    }
+
+    main{
+        padding-bottom: 13vh;
+    }
+
+    footer{
+        height: 10vh;
+    }
+
+    #labszoveg{
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
