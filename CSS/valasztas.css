@@ -1,7 +1,7 @@
 #setup {
     display: block;
     /* margin: 0 auto; */
-    width: 50vh;
+    /* width: 50vh; */
 }
 
 #setup h2 {
@@ -59,8 +59,8 @@ h2, h3 {
          width: 90vw;
     } */
 
-    /* input[type=submit] {
+    input[type=submit] {
         margin: auto;
-    } */
+    }
 }
 
