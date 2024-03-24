@@ -6,12 +6,12 @@
         <link rel="stylesheet" href="../CSS/reg.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="/JS/atvaltos.js"></script>
-        <script src="/JS/mobilmenu.js"></script>
+        <script src="../JS/atvaltos.js"></script>
+        <script src="../JS/mobilmenu.js"></script>
     </head>
     <body>
         <header>
-            <img id="logo" title="LOGO" alt="LOGO" src="/img/logo.webp"></img>
+            <img id="logo" title="LOGO" alt="LOGO" src="../img/logo.webp"></img>
             <nav>
                 <ul id="hambi" onclick=nyisdKi()>
                     <li id="hambiM">
@@ -35,6 +35,7 @@
                     <li class="mobilLink"><a class="link">Korábbiak</a></li>
                     <li class="mobilLink"><a class="link">Statisztikák</a></li>
                     <li class="mobilLink" id="bejelentkezes"><a class="link" href="./reg.html">Belépés</a></li>
+                    <li class="mobilLink" id="profil"><a class="link" href="./profil.html">Profil</a></li>
                 </ul>
                 <!--<ul id="bejelentkezos">
                     <li><a class="link">Regisztráció</a></li>
@@ -45,7 +46,7 @@
         <main>
             <section id="reg">
                 <h2 id="cim">Regiszráció</h2>
-                <form action="regist" method="post">
+                <form action="regist" method="post" enctype="application/x-www-form-urlencoded">
                     <article class="be">
                         <label>Felhasználónév</label>
                         <br>
@@ -68,14 +69,14 @@
                         <input type="password">
                     </article>
                     <article class="be">
-                        <input type="submit" class="gomb">
+                        <input type="submit" class="gomb" value="Regisztráció">
                     </article>
                     <article class="be atvaltos" onclick=regToBej()>Van már fiókod? Jelenkezz be!</article>
                 </form>
             </section>
             <section id="bej">
                 <h2 id="cim">Bejelentkezés</h2>
-                <form action="bej" method="post">
+                <form action="bej" method="post" enctype="application/x-www-form-urlencoded">
                     <article class="be">
                         <label>Felhasználónév</label>
                         <br>
@@ -87,7 +88,7 @@
                         <input type="password">
                     </article>
                     <article class="be">
-                        <input type="submit" class="gomb">
+                        <input type="submit" class="gomb" value="Bejelentkezés">
                     </article>
                     <article class="be atvaltos" onclick=bejToReg()>Nincs még fiókod? Regisztrálj!</article>
             </section>
