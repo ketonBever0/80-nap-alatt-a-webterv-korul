@@ -53,9 +53,12 @@
 
         <!-- <div id="formcontainer"> -->
             <section id="setup">
+                
+                <h2>Gyakran hallott szavak számolása</h2>
+
             <form onsubmit={startCounting(event)}>
 
-                <article>
+                <div>
                     <label for="educator">Oktató:</label><br>
                     <!-- <select required id="educator" name="educator" onchange={handleInputChange(event)}>
                         <option value="" disabled selected>Válassz</option>
@@ -68,12 +71,12 @@
 
 
 
-                </article>
+                </div>
                 <br>
-                <article>
+                <div>
                     <label for="word">Szó(fordulat):</label><br>
                     <input type="text" required id="word" name="word" onchange={handleInputChange(event)}>
-                </article>
+                </div>
                 
 
                 <br>

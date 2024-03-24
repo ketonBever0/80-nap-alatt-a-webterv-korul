@@ -1,5 +1,11 @@
 #setup {
     display: block;
+    /* margin: 0 auto; */
+    width: 50vh;
+}
+
+#setup h2 {
+    margin-bottom: 4rem;
 }
 
 #formcontainer, section {
@@ -9,7 +15,7 @@
     padding: 5rem;
 }
 
-form article {
+form div {
     margin: auto;
 }
 
@@ -26,6 +32,9 @@ input, select
     width: 15rem;
 }
 
+input:focus {
+    background-color: lightgreen;
+}
 
 input[type=submit] {
     /* margin: 6px auto; */
@@ -50,8 +59,8 @@ h2, h3 {
          width: 90vw;
     } */
 
-    input[type=submit] {
+    /* input[type=submit] {
         margin: auto;
-    }
+    } */
 }
 
