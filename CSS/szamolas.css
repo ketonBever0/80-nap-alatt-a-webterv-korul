@@ -4,6 +4,7 @@ main {
 
 #oncounting {
     display: none;
+    /* height: 20vh; */
 }
 
 /* #title-word {
@@ -13,10 +14,11 @@ main {
 #boxcontainer {
     margin: 2rem auto 12rem auto;
     /* width: 20%; */
+    /* height: 60%; */
 }
 
 .timebox {
-    background-color: darkorchid;
+    background-color: rgb(108, 13, 202);
     color: white;
     width: 7rem;
     padding: 15px 40px;
@@ -63,9 +65,11 @@ h2 {
     margin: auto;
     background-color: blue;
     color: white;
-    padding: 15px 50px;
+    padding: 20px 5rem;
     border-radius: 30px;
     cursor: pointer;
+    /* display: block; */
+    /* width: 120px; */
 }
 
 #addtitle {
@@ -81,6 +85,8 @@ h2 {
 #scroller {
     /* display: none; */
     height: 16rem;
+    position: relative;
+    top: 100px;
 
 }
 

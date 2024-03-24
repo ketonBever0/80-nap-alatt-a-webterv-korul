@@ -123,7 +123,7 @@ const stopTimer = () => {
   document.getElementById("footer").style.display = "none";
 
   document.getElementById("boxcontainer").innerHTML += `
-    <h2 id="sumtitle">${data.educator} ${wordCount}x mondta, hogy: ${data.word}</h2>
+    <h2 id="sumtitle">Az előadásnak vége. 🥹<br>${data.educator} ${wordCount}x mondta, hogy: ${data.word}</h2>
     <button id="savebtn" onclick={download()}>
         Letöltés
     </button>

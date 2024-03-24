@@ -19,18 +19,22 @@ input, select
     border-radius: 20px;
     height: 30px;
     font-size: medium;
+    display: block;
     padding-left: 5px;
     padding-right: 5px;
-    margin: 10px, auto;
+    /* margin: 10px auto; */
     width: 15rem;
 }
 
 
 input[type=submit] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 5rem;
+    /* margin: 6px auto; */
+    /* padding: 20px 5px; */
+    width: 8rem;
+    height: 3rem;
     cursor: pointer;
+    background-color: green;
+    color: white;
 }
 
 h2, h3 {
@@ -45,5 +49,9 @@ h2, h3 {
     /* #formcontainer, section {
          width: 90vw;
     } */
+
+    input[type=submit] {
+        margin: auto;
+    }
 }
 
