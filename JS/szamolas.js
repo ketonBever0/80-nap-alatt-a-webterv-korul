@@ -1,10 +1,14 @@
-var onCounting = false;
+// var onCounting = false;
 
 // if (onCounting) {
 //   window.onbeforeunload = () => {
 //     return "";
 //   };
 // }
+
+window.onload = () => {
+  window.scrollTo(0, 0);
+};
 
 const addZero = (val) => {
   return val < 10 ? `0${val}` : val;
@@ -86,13 +90,13 @@ var wordCount = 0;
 var realTimes = [];
 var stopwatchTimes = [];
 
-var now = new Date();
 const addCount = () => {
   wordCount++;
+  var now = new Date();
 
   var nowStr = `${now.getHours()}:${addZero(now.getMinutes())}:${addZero(
     now.getSeconds()
-  )}.${Math.round(now.getMilliseconds() / 100, 1)}`;
+  )}.${Math.floor(now.getMilliseconds() / 100, 1)}`;
 
   realTimes.push(nowStr);
 
@@ -132,6 +136,7 @@ const stopTimer = () => {
 };
 
 const download = () => {
+  const now = new Date();
   var csv = "Valós idő;Stopper idő\n";
 
   for (let i = 0; i < wordCount; i++) {
@@ -151,9 +156,10 @@ const download = () => {
   link.click();
 };
 
-
 const reset = () => {
+  // document
+  //   .getElementById("title-educator")
+  //   .scrollIntoView({ behavior: "smooth" });
 
   location.reload();
-
-}
+};
