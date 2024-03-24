@@ -44,6 +44,7 @@ article{
 #profilkep{
     border-radius: 100%;
     width: 30vw;
+    height: 30vw;
 }
 
 #profilAdatok{
@@ -55,3 +56,27 @@ th, td{
     text-align: left;
 }
 
+@media only screen and (max-width: 768px) {
+    main{
+        display: block;
+    }
+
+    section{
+        width: 100vw;
+    }
+
+    #profilkep{
+        width: 60vw;
+        height: 60vw;
+    }
+
+    #pat{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 400px) {
+    input[type="file"]{
+        width: 70vw;
+    }
+}
