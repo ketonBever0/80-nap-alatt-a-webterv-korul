@@ -53,18 +53,17 @@ h2 {
 
 #timer {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: white;
     font-size: 16pt;
 }
 
 #addbtn {
-    margin-top: 20px;
     display: block;
     margin: auto;
     background-color: blue;
     color: white;
-    padding: 10px 50px;
+    padding: 15px 50px;
     border-radius: 30px;
     cursor: pointer;
 }
@@ -81,6 +80,41 @@ h2 {
 
 #scroller {
     /* display: none; */
-    height: 4rem;
+    height: 16rem;
 
 }
+
+#stopbtn {
+    display: block;
+    margin: 10px auto 0;
+    background-color: red;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#sumtitle {
+    margin-top: 12px;
+}
+
+#savebtn {
+    display: block;
+    margin: 12px auto;
+    background-color: darkcyan;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#resetbtn {
+    display: block;
+    margin: 20px auto;
+    background-color: chocolate;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
