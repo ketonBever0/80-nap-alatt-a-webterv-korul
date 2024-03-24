@@ -8,18 +8,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../JS/atvaltos.js"></script>
         <script src="../JS/mobilmenu.js"></script>
+        <title>Belépés</title>
     </head>
     <body>
         <header>
             <img id="logo" title="LOGO" alt="LOGO" src="../img/logo.webp">
             <nav>
-                <ul class="hambi" onclick=nyisdKi()>
-                    <li id="hambiM">
+                <ul id="hambi" onclick=nyisdKi()>
+                    <li class="hambiM">
                         <div class="hambiMenu"></div>
                         <div class="hambiMenu"></div>
                         <div class="hambiMenu"></div>
                     </li>
-                </ul> 
+                </ul>
                 <ul id="opcio">
                     <li id="hambiKinyitva">
                         <ul id="hambi2" onclick=csukdBe()>
@@ -35,62 +36,74 @@
                     <li class="mobilLink"><a class="link">Korábbiak</a></li>
                     <li class="mobilLink"><a class="link">Statisztikák</a></li>
                     <li class="mobilLink" id="bejelentkezes"><a class="link" href="./reg.html">Belépés</a></li>
-                    <li class="mobilLink" id="profil"><a class="link" href="./profil.html">Profil</a></li>
+                    <li class="mobilLink" id="profilLink"><a class="link" href="./profil.html">Profil</a></li>
+
                 </ul>
-                <!--<ul id="bejelentkezos">
-                    <li><a class="link">Regisztráció</a></li>
-                    <li><a class="link">Bejelentkezés</a></li>
-                </ul>-->
             </nav>
         </header>
         <main>
             <section id="reg">
-                <h2 id="cim">Regiszráció</h2>
+                <h2 class="cim">Regiszráció</h2>
                 <form action="regist" method="post" enctype="application/x-www-form-urlencoded">
                     <article class="be">
+                        <h6>&#8203;</h6>
                         <label>Felhasználónév</label>
                         <br>
                         <input type="text">
                     </article>
                     <article class="be">
+                        <h6>&#8203;</h6>
                         <label>Neptunkód</label>
                         <br>
                         <input type="text" id="valami">
                     </article>
                 
                     <article class="be">
+                        <h6>&#8203;</h6>
                         <label>Jelszó</label>
                         <br>
                         <input type="password">
                     </article>
                     <article class="be">
+                        <h6>&#8203;</h6>
                         <label>Jelszó újra</label>
                         <br>
                         <input type="password">
                     </article>
                     <article class="be">
+                        <h6>&#8203;</h6>
                         <input type="submit" class="gomb" value="Regisztráció">
                     </article>
-                    <article class="be atvaltos" onclick=regToBej()>Van már fiókod? Jelenkezz be!</article>
+                    <article class="be atvaltos" onclick=regToBej()>
+                        <h6>&#8203;</h6>
+                        Van már fiókod? Jelenkezz be!
+                    </article>
                 </form>
             </section>
             <section id="bej">
-                <h2 id="cim">Bejelentkezés</h2>
-                <form action="bej" method="post" enctype="application/x-www-form-urlencoded">
+                <h2 class="cim">Bejelentkezés</h2>
+                <form method="post" enctype="application/x-www-form-urlencoded">
                     <article class="be">
+                        <h6>&#8203;</h6>
                         <label>Felhasználónév</label>
                         <br>
                         <input type="text">
                     </article>
                     <article class="be">
+                        <h6>&#8203;</h6>
                         <label>Jelszó</label>
                         <br>
                         <input type="password">
                     </article>
                     <article class="be">
+                        <h6>&#8203;</h6>
                         <input type="submit" class="gomb" value="Bejelentkezés">
                     </article>
-                    <article class="be atvaltos" onclick=bejToReg()>Nincs még fiókod? Regisztrálj!</article>
+                    <article class="be atvaltos" onclick=bejToReg()>
+                        <h6>&#8203;</h6>
+                        Nincs még fiókod? Regisztrálj!
+                    </article>
+                </form>
             </section>
         </main>
     </body>

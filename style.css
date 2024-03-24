@@ -152,14 +152,12 @@ a{
         opacity: 0;
     }
 
-    #felso{
-        rotate: 45deg;
-        translate: 0px,-11px;
+    #felso {
+        transform: rotate(45deg);
     }
-
-    #also{
-        rotate: -45deg;
-        translate: 0px,11px;
+    
+    #also {
+        transform: rotate(-45deg);
     }
 
     .mobilLink{
