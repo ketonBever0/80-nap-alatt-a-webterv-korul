@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../CSS/valasztas.css">
+    <link rel="stylesheet" href="../CSS/szamolas.css">
     <script src="/JS/mobilmenu.js"></script>
     <title>Választás</title>
+    <script defer src="../JS/szamolas.js"></script>
 </head>
 
 <body>
@@ -22,7 +24,7 @@
                     <div class="hambiMenu"></div>
                     <div class="hambiMenu"></div>
                 </li>
-            </ul> 
+            </ul>
             <ul id="opcio">
                 <li id="hambiKinyitva">
                     <ul id="hambi2" onclick=csukdBe()>
@@ -50,22 +52,25 @@
     <main>
 
         <!-- <div id="formcontainer"> -->
-            <section>
-            <form action="szamolas.html" method="POST">
+            <section id="setup">
+            <form onsubmit={{startCounting(event)}}>
 
                 <article>
-                    <label for="oktato">Oktató:</label><br>
-                    <select name="oktato" id="oktato">
-                        <option value="null" disabled selected>Válassz</option>
+                    <label for="educator">Oktató:</label><br>
+                    <select required id="educator" name="educator" onchange={handleInputChange(event)}>
+                        <option value="" disabled selected>Válassz</option>
                         <option value="GerTom">GerTom</option>
-                        <option value="Miki">Miki</option>
+                        <option value="Dr. Kató Zoltán">Dr. Kató Zoltán</option>
     
                     </select>
+
+
+
                 </article>
                 <br>
                 <article>
                     <label for="word">Szó(fordulat):</label><br>
-                    <input type="text" id="word">
+                    <input type="text" required id="word" name="word" onchange={handleInputChange(event)}>
                 </article>
                 
 
@@ -76,7 +81,74 @@
         </section>
         <!-- </div> -->
 
+        <article id="oncounting">
+            <h2 id="title-educator"></h2>
+
+            <h3 id="title-word"></h3>
+    
+            <div id="boxcontainer">
+                
+                <!-- <div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div><div class="timebox">
+                    <p>1: 0:05:00</p>
+                    <p>Processzus</p>
+                </div> -->
+
+
+                <span id="scroller"></span>
+            </div>
+        </article>
+
     </main>
+
+    <footer id="footer">
+        <!-- <p id="timer">0:05:13</p> -->
+        <p id="timer">
+            <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>.<span id="milliseconds"></span>
+        </p>
+
+
+    <button id="addbtn" onclick={addCount()}>
+        <span class="plusicon">+</span>
+        <br>
+        <span id="addtitle"></span>
+        <br>
+        <span class="plusicon">+</span>
+    </button>
+
+    </footer>
 
 
 

@@ -1,8 +1,6 @@
-/* section {
+#setup {
     display: block;
-    margin: auto;
-
-} */
+}
 
 #formcontainer, section {
     display: block;
@@ -32,16 +30,20 @@ input[type=submit] {
     margin-left: auto;
     margin-right: auto;
     width: 5rem;
+    cursor: pointer;
 }
 
+h2, h3 {
+    text-align: center;
+}
 
 @media only screen and (max-width: 768px) {
     /*#cim{
         color: yellow;
     }*/
 
-    #formcontainer, section {
+    /* #formcontainer, section {
          width: 90vw;
-    }
+    } */
 }
 
