@@ -51,6 +51,8 @@ h2 {
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    width: inherit;
+    height: auto;
 }
 
 #timer {
@@ -59,6 +61,12 @@ h2 {
     color: white;
     font-size: 16pt;
 }
+
+/* button:active, input[type=submit]:active {
+    outline: 5px;
+    background-color: black;
+
+} */
 
 #addbtn {
     display: block;
