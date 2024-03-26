@@ -5,6 +5,11 @@ main {
 #oncounting {
     display: none;
     /* height: 20vh; */
+    background-color: rgb(17, 169, 111);
+    border-radius: 50px;
+    margin: 10px auto;
+    padding: 30px;
+    max-width: 60%;
 }
 
 /* #title-word {

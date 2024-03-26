@@ -121,6 +121,8 @@ const addCount = () => {
 
 const stopTimer = () => {
 
+  if(!window.confirm("Biztos leállítod az időzítőt?")) return;
+
   window.onbeforeunload = null;
 
   // document.getElementById("oncounting").style.display = "none";
