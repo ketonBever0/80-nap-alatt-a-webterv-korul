@@ -63,11 +63,12 @@ const handleInputChange = (e) => {
 const startCounting = (e) => {
   e.preventDefault();
 
-  //   if (data.educator == "") return;
+  if (data.educator == "") return;
+  if (data.word == "") return;
 
-  // window.onbeforeunload = () => {
-  //     return "";
-  // }
+  window.onbeforeunload = () => {
+    return "";
+  };
 
   setInterval(timer, 100);
 
@@ -119,6 +120,11 @@ const addCount = () => {
 };
 
 const stopTimer = () => {
+
+  if(!window.confirm("Biztos leállítod az időzítőt?")) return;
+
+  window.onbeforeunload = null;
+
   // document.getElementById("oncounting").style.display = "none";
   document.getElementById("footer").style.display = "none";
 
