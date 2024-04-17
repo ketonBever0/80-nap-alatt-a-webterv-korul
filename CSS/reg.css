@@ -58,6 +58,7 @@ input[type="submit"]{
     background-color: rgb(76, 141, 10);
 }
 
+
 @media only screen and (max-width: 768px) {
     /*#cim{
         color: yellow;

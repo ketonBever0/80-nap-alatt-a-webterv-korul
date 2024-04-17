@@ -2,7 +2,10 @@
 {
     margin: 0;
     padding: 0;
+    /*background-color: aqua;*/
 }
+
+
 
 body{
     background-color: rgb(243, 177, 130);
@@ -120,6 +123,16 @@ footer{
     margin-bottom: 10px;
 }
 
+/*Próba*/
+main {
+    padding-bottom: 40px;
+}
+
+footer{
+    height: 40px;
+}
+
+
 @media (max-width: 764px) {
     
 
@@ -195,3 +208,15 @@ footer{
         margin-right: 20px;
     }
 }
+
+/*Próbálkozás a footer s main kölcsönös helyrerakására.
+@media (min-width: 765px)
+{
+    main {
+        padding-bottom: 40px;
+    }
+
+    footer{
+        height: 40px;
+    }
+}*/
