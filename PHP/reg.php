@@ -27,7 +27,7 @@
         );
     
         // A JSON adatok kiírása a fájlba
-        $file = '../JSON/'.$_POST["fhn"].'.json';
+        $file = '../JSON/USERS/'.$_POST["fhn"].'.json';
         if (file_exists($file)) {
             echo "Sikertelen regisztráció, ilyen felhasználó már létezik!";
             exit;

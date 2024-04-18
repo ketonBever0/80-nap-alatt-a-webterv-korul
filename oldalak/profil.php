@@ -40,6 +40,7 @@
                 </ul>
             </nav>
         </header>
+
         <main>
             <section id="profil">
                 <h6>&#8203;</h6>
@@ -50,14 +51,18 @@
                 <article id="profilAdatok">
                     <h6>&#8203;</h6>
                     <table id="pat">
+                        <?php
+                            $jsonData = file_get_contents('../JSON/aktualisanBejelntkezett.json');
+                            $data = json_decode($jsonData, true);
+                        ?>
                         <tbody>
                             <tr>
                                 <th>Felhasználónév</th>
-                                <td>robert1022</td>
+                                <td><?php echo $data["fhn"]; ?></td>
                             </tr>
                             <tr>
                                 <th>Neptunkód</th>
-                                <td>Y7BRWS</td>
+                                <td><?php echo $data["neptun"]; ?></td>
                             </tr>
                         </tbody>
                     </table>
