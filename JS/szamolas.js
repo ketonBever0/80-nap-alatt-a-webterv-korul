@@ -133,6 +133,13 @@ const stopTimer = () => {
     <button id="savebtn" onclick={download()}>
         Letöltés
     </button>
+
+    <form action="../PHP/meres_ment.php" method="post">
+      <input type="text" value="${realTimes}" name="realTimes" class="invisible">
+      <input type="text" value="${stopwatchTimes}" name="stopwatchTimes" class="invisible">
+      <input type="submit" value="Közzététel" id="savebtn">
+    </form>
+
     <button id="resetbtn" onclick={reset()}>
         Újra
     </button>
