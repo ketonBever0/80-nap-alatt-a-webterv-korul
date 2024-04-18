@@ -137,3 +137,6 @@ h2 {
     cursor: pointer;
 }
 
+.invisible {
+    display: none;
+}
