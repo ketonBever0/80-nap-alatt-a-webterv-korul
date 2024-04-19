@@ -36,19 +36,20 @@
                 <li class="mobilLink"><a class="link">Statisztikák</a></li>
                 <li class="mobilLink" id="bejelentkezes"><a class="link" href="./reg.html">Belépés</a></li>
                 <li class="mobilLink" id="profil"><a class="link" href="./profil.php">Profil</a></li>
+                <li class="mobilLink" id="kijelentkezes"><a class="link" href="../PHP/kij.php">Kilépés</a></li>            
             </ul>
             </nav>
         </header>
         <?php
-            $jsonData = file_get_contents('../JSON/aktualisanBejelntkezett.json');
-            $data = json_decode($jsonData, true);
+            //$jsonData = file_get_contents('../JSON/aktualisanBejelntkezett.json');
+            //$data = json_decode($jsonData, true);
         ?>
         <main>
             <section id="profil">
                 <h6>&#8203;</h6>
                 <article id="profilkepMegjelenes">
                     <h6>&#8203;</h6>
-                    <?php echo '<img id="profilkep" src="../img/'.$data["profilkep"].'" alt="profilkep">'; ?>
+                    <?php echo '<img id="profilkep" src="../img/'.$_COOKIE["profilkep"].'" alt="profilkep">'; ?>
                 </article>
                 <article id="profilAdatok">
                     <h6>&#8203;</h6>
@@ -57,11 +58,11 @@
                         <tbody>
                             <tr>
                                 <th>Felhasználónév</th>
-                                <td><?php echo $data["fhn"]; ?></td>
+                                <td><?php echo $_COOKIE["fhn"]; ?></td>
                             </tr>
                             <tr>
                                 <th>Neptunkód</th>
-                                <td><?php echo $data["neptun"]; ?></td>
+                                <td><?php echo $_COOKIE["neptun"]; ?></td>
                             </tr>
                         </tbody>
                     </table>
@@ -83,8 +84,8 @@
                 </article>
                 <article id="profilkepModositas">
                     <h6>&#8203;</h6>
-                    <form  method="post" enctype="multipart/form-data">
-                        <input type="file" id="kepf">
+                    <form method="post" enctype="multipart/form-data">
+                        <input type="file" id="kepf" name="profilkepFeltoltes" accept="image/*">
                         <input type="submit" value="Profilkép módosítása">
                     </form>
                 </article>

@@ -34,10 +34,14 @@
         }
         $json_data = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     
-        if(file_put_contents($file, $json_data, FILE_APPEND)) {
+        if(file_put_contents($file, $json_data)) {
             //Sikeres reg, átvisz a profil.html-re
             header('Location: ../oldalak/profil.php');
-            file_put_contents('../JSON/aktualisanBejelntkezett.json', $json_data);
+            setcookie('fhn', $data['fhn'], time() + 3600,'/');
+            setcookie('neptun', $data['neptun'], time() + 3600,'/');
+            setcookie('profilkep', $data['profilkep'], time() + 3600,'/');
+            echo "<script>console.log(".$_COOKIE['fhn'].")</script>";
+            //file_put_contents('../JSON/aktualisanBejelntkezett.json', $json_data);
             exit(); // Megszakítjuk a script végrehajtását
         } else {
             //Ellenőrzés jellegű
@@ -45,4 +49,3 @@
         }
     }
 ?>
-      

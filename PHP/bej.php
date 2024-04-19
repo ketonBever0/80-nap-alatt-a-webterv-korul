@@ -15,27 +15,33 @@ $data = json_decode($jsonData, true);
 
 if (!password_verify($_POST["passb"],$data["pass"])) {
     echo '<script>';
-        echo 'alert("HAMIS JELSZÓ!");';
+        echo 'alert("HIBÁS JELSZÓ!");';
         echo 'window.location.href = "../oldalak/reg.html";';
         echo '</script>';
     exit;
 }
 
-header("Location: ../oldalak/profil.php");
+
 
 //Bejelntkezett felhasználó elmentése
-$data = array(
+/*$data = array(
     'fhn' => $data["fhn"],
     'neptun' => $data["neptun"],
     'pass' => $data["pass"],
     'passa' => $data["passa"],
     'profilkep' => $data["profilkep"]
-);
+);*/
 
-// A JSON adatok kiírása a fájlba
-$file = '../JSON/aktualisanBejelntkezett.json';
+setcookie('fhn', $data['fhn'], time() + 3600,'/');
+setcookie('neptun', $data['neptun'], time() + 3600,'/');
+setcookie('profilkep', $data['profilkep'], time() + 3600,'/');
+$felhasznalonev = $_COOKIE["fhn"];
+echo "<script>console.log('$felhasznalonev')</script>";
+header("Location: ../oldalak/profil.php");
+// A JSON adatok kiírása a fájlba - Teszt hogy működik-e a profilra bejelentkezés
+/*$file = '../JSON/aktualisanBejelntkezett.json';
 
 $json_data = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
-file_put_contents($file, $json_data);
+file_put_contents($file, $json_data);*/
 ?>

@@ -16,9 +16,10 @@ if (($_POST["jelszo"] != $_POST["jelszoujra"])) {
     exit;
 }
 
-$jsonData = file_get_contents('../JSON/aktualisanBejelntkezett.json');
+$jsonData = file_get_contents('../JSON/USERS/'.$_COOKIE["fhn"].'.json');
 $data = json_decode($jsonData, true);
-$felhasznalonev = $data["fhn"];
+$felhasznalonev = $_COOKIE["fhn"];
+echo "<script>console.log('$felhasznalonev')</script>";
 
 $file = '../JSON/USERS/'.$felhasznalonev.'.json';
 
