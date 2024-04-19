@@ -16,7 +16,8 @@ h1 {
     text-align: center;
     background-color: blue;
     border-radius: 30px;
-    width: 25%;
+    max-width: 400px;
+    width: 50%;
 }
 
 .meresbox h3 {
