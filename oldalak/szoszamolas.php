@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
-
+if (!isset($_COOKIE["fhn"])) {
+    header("Location: ./reg.html");
+}
 ?>
 <html lang="hu">
 

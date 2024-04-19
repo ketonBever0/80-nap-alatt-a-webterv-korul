@@ -75,6 +75,11 @@
                 echo "<button class=\"likebtn\" data-index=\"$i\" data-action=\"like\">Jó - $likes</button>";
                 $dislikes = count($data[$i]["dislikes"]);
                 echo "<button class=\"dislikebtn\" data-index=\"$i\" data-action=\"dislike\">Nem jó - $dislikes</button>";
+                echo "<br>";
+                $who = $data[$i]['who'];
+                $when = $data[$i]['when'];
+
+                echo "számolta: $who<br>ekkor: $when";
 
                 echo "</div>";
                 echo "<br>";

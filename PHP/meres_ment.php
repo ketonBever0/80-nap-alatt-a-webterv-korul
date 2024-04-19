@@ -7,15 +7,14 @@ $stopwatchTimes = $_POST["stopwatchTimes"];
 
 $jsonFile = "../JSON/meresek.json";
 
-$user = "";
 
 $data = json_decode(file_get_contents($jsonFile), true);
 
 $data[] = array(
     "educator" => $educator,
     "word" => $word,
-    "who" => $user,
-    "at" => date('Y-m-d_H:i:s'),
+    "who" => $_COOKIE["fhn"],
+    "when" => date('Y-m-d H:i:s'),
     "realTimes" => explode(",", $realTimes),
     "stopwatchTimes" => explode(",", $stopwatchTimes),
     "all" => count(explode(",", $realTimes)),
