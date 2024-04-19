@@ -1,0 +1,57 @@
+[
+    {
+        "educator": "Dr. Kató Zoltán",
+        "word": "Processzus",
+        "realTimes": [
+            "1:16:45.2",
+            "1:16:45.9",
+            "1:16:46.3"
+        ],
+        "stopwatchTimes": [
+            "0:00:01.6",
+            "0:00:02.2",
+            "0:00:02.7"
+        ],
+        "all": 3,
+        "likes": [],
+        "dislikes": []
+    },
+    {
+        "educator": "Májer",
+        "word": "Tulajdonképpen",
+        "realTimes": [
+            "1:17:11.7",
+            "1:17:12.1",
+            "1:17:12.5",
+            "1:17:12.9",
+            "1:17:13.4"
+        ],
+        "stopwatchTimes": [
+            "0:00:01.3",
+            "0:00:01.7",
+            "0:00:02.2",
+            "0:00:02.6",
+            "0:00:03.1"
+        ],
+        "all": 5,
+        "likes": [],
+        "dislikes": []
+    },
+    {
+        "educator": "Dr. Kató Zoltán",
+        "word": "Processzus",
+        "realTimes": [
+            "1:43:11.9",
+            "1:43:12.4",
+            "1:43:12.8"
+        ],
+        "stopwatchTimes": [
+            "0:00:01.3",
+            "0:00:01.8",
+            "0:00:02.3"
+        ],
+        "all": 3,
+        "likes": [],
+        "dislikes": []
+    }
+]

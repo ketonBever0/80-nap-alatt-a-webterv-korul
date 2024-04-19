@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.meresek {
+    display: block;
+    margin: 10px auto;
+    color: white;
+    
+}
+
+.meresbox {
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    background-color: blue;
+    border-radius: 30px;
+    width: 25%;
+}
+
+.meresbox h3 {
+    margin-bottom: 20px;
+}
+
+.meresbox ol li {
+    margin-bottom: 10px;
+}

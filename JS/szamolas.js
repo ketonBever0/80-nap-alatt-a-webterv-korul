@@ -135,6 +135,8 @@ const stopTimer = () => {
     </button>
 
     <form action="../PHP/meres_ment.php" method="post">
+      <input type="text" value="${data.educator}" name="educator" class="invisible">
+      <input type="text" value="${data.word}" name="word" class="invisible">
       <input type="text" value="${realTimes}" name="realTimes" class="invisible">
       <input type="text" value="${stopwatchTimes}" name="stopwatchTimes" class="invisible">
       <input type="submit" value="Közzététel" id="savebtn">

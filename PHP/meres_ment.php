@@ -1,13 +1,27 @@
 <?php
 
+$educator = $_POST["educator"];
+$word = $_POST["word"];
 $realTimes = $_POST["realTimes"];
 $stopwatchTimes = $_POST["stopwatchTimes"];
 
-$data = "$realTimes\n$stopwatchTimes";
+$jsonFile = "../JSON/meresek.json";
 
-$currentDate = date('Y-m-d H:i:s');
+$data = json_decode(file_get_contents($jsonFile), true);
 
-file_put_contents("../meresek/", $data, FILE_APPEND);
+$data[] = array(
+    "educator" => $educator,
+    "word" => $word,
+    "realTimes" => explode(",", $realTimes),
+    "stopwatchTimes" => explode(",", $stopwatchTimes),
+    "all" => count(explode(",", $realTimes)),
+    "likes" => [],
+    "dislikes" => []
+);
 
 
-echo "<h2>Mérés lementve</h2>";
+file_put_contents($jsonFile, json_encode($data, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
+
+
+echo "<h2>Mérés lementve</h2>\n";
+
