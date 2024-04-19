@@ -127,6 +127,13 @@ h2 {
     cursor: pointer;
 }
 
+#postbtn {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(20, 119, 20);
+}
+
 #resetbtn {
     display: block;
     margin: 20px auto;

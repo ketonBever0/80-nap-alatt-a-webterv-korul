@@ -20,8 +20,8 @@ $data[] = array(
 );
 
 
-file_put_contents($jsonFile, json_encode($data, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
+file_put_contents($jsonFile, json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
 
-echo "<h2>Mérés lementve</h2>\n";
+header("Location: http://localhost/wt_projekt/oldalak/korabbiak.php");
 

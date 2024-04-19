@@ -49,6 +49,7 @@
             <?php
 
             $data = json_decode(file_get_contents("../JSON/meresek.json"), true);
+            $data = array_reverse($data);
 
             for ($i = 0; $i < count($data); $i++) {
                 echo "<div class=\"meresbox\">";

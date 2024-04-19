@@ -139,7 +139,7 @@ const stopTimer = () => {
       <input type="text" value="${data.word}" name="word" class="invisible">
       <input type="text" value="${realTimes}" name="realTimes" class="invisible">
       <input type="text" value="${stopwatchTimes}" name="stopwatchTimes" class="invisible">
-      <input type="submit" value="Közzététel" id="savebtn">
+      <input type="submit" value="Közzététel" id="postbtn">
     </form>
 
     <button id="resetbtn" onclick={reset()}>
