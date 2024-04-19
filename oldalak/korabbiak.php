@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
@@ -32,10 +32,10 @@
                 </li>
                 <li class="mobilLink"><a class="link" href="../index.html">Kezdőlap</a></li>
                 <li class="mobilLink"><a class="link" href="./szoszamolas.html">Felvitel</a></li>
-                <li class="mobilLink"><a class="link">Korábbiak</a></li>
+                <li class="mobilLink"><a class="link" href="./korabbiak.php">Korábbiak</a></li>
                 <li class="mobilLink"><a class="link">Statisztikák</a></li>
                 <li class="mobilLink" id="bejelentkezes"><a class="link" href="./reg.html">Belépés</a></li>
-                <li class="mobilLink" id="profil"><a class="link" href="./profil.html">Profil</a></li>
+                <li class="mobilLink" id="profil"><a class="link" href="./profil.php">Profil</a></li>
             </ul>
         </nav>
     </header>
