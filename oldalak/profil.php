@@ -40,24 +40,29 @@
                 </ul>
             </nav>
         </header>
+        <?php
+            $jsonData = file_get_contents('../JSON/aktualisanBejelntkezett.json');
+            $data = json_decode($jsonData, true);
+        ?>
         <main>
             <section id="profil">
                 <h6>&#8203;</h6>
                 <article id="profilkepMegjelenes">
                     <h6>&#8203;</h6>
-                    <img id="profilkep" src="../img/profilpelda.webp" alt="profilkep">
+                    <?php echo '<img id="profilkep" src="../img/'.$data["profilkep"].'" alt="profilkep">'; ?>
                 </article>
                 <article id="profilAdatok">
                     <h6>&#8203;</h6>
                     <table id="pat">
+                        
                         <tbody>
                             <tr>
                                 <th>Felhasználónév</th>
-                                <td>robert1022</td>
+                                <td><?php echo $data["fhn"]; ?></td>
                             </tr>
                             <tr>
                                 <th>Neptunkód</th>
-                                <td>Y7BRWS</td>
+                                <td><?php echo $data["neptun"]; ?></td>
                             </tr>
                         </tbody>
                     </table>
@@ -67,12 +72,12 @@
                 <h6>&#8203;</h6>
                 <article id="jelszovalt">
                     <h6>&#8203;</h6>
-                    <form  method="post" enctype="application/x-www-form-urlencoded">
+                    <form action="../PHP/jelszomodosit.php" method="post" enctype="application/x-www-form-urlencoded">
                         <label for="jel"></label>
                         <input type="password" name="jelszo" id="jel" placeholder="Új jelszó">
                         <br>
                         <label for="jel2"></label>
-                        <input type="password" name="jelszo" id="jel2"  placeholder="Új jelszó újra">
+                        <input type="password" name="jelszoujra" id="jel2"  placeholder="Új jelszó újra">
                         <br>
                         <input type="submit" value="Jelszó módosítása">
                     </form>
