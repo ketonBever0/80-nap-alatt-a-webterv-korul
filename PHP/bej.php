@@ -29,7 +29,7 @@ $data = array(
     'neptun' => $data["neptun"],
     'pass' => $data["pass"],
     'passa' => $data["passa"],
-    'profilkep' => "default"
+    'profilkep' => $data["profilkep"]
 );
 
 // A JSON adatok kiírása a fájlba

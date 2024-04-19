@@ -23,7 +23,7 @@
             'neptun' => trim($_POST["neptun"]),
             'pass' => password_hash(trim($_POST["pass"]),PASSWORD_DEFAULT),
             'passa' => password_hash(trim($_POST["passa"]),PASSWORD_DEFAULT),
-            'profilkep' => "default"
+            'profilkep' => "profilpelda.webp"
         );
     
         // A JSON adatok kiírása a fájlba
@@ -36,7 +36,8 @@
     
         if(file_put_contents($file, $json_data, FILE_APPEND)) {
             //Sikeres reg, átvisz a profil.html-re
-            header('Location: ../oldalak/profil.html');
+            header('Location: ../oldalak/profil.php');
+            file_put_contents('../JSON/aktualisanBejelntkezett.json', $json_data);
             exit(); // Megszakítjuk a script végrehajtását
         } else {
             //Ellenőrzés jellegű
