@@ -26,3 +26,21 @@ h1 {
 .meresbox ol li {
     margin-bottom: 10px;
 }
+
+.likebtn {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.dislikebtn {
+    background-color: red;
+    color: white;
+    padding: 6px;
+    border-radius: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
