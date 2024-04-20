@@ -49,7 +49,7 @@
                 <h6>&#8203;</h6>
                 <article id="profilkepMegjelenes">
                     <h6>&#8203;</h6>
-                    <?php echo '<img id="profilkep" src="../img/'.$_COOKIE["profilkep"].'" alt="profilkep">'; ?>
+                    <?php echo '<img id="profilkep" src="../img/USER/'.$_COOKIE["profilkep"].'" alt="profilkep">'; ?>
                 </article>
                 <article id="profilAdatok">
                     <h6>&#8203;</h6>
@@ -84,7 +84,7 @@
                 </article>
                 <article id="profilkepModositas">
                     <h6>&#8203;</h6>
-                    <form method="post" enctype="multipart/form-data">
+                    <form action="../PHP/profilkepcsere.php" method="post" enctype="multipart/form-data">
                         <input type="file" id="kepf" name="profilkepFeltoltes" accept="image/*">
                         <input type="submit" value="Profilkép módosítása">
                     </form>
