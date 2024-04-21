@@ -57,13 +57,21 @@ if (isset($_POST["likebtn"])) {
 
 
                 <?php
-                if (isset($_COOKIE["fhn"])) {
-                    echo '<li class="mobilLink" id="profil"><a class="link" href="./profil.php">Profil</a></li>';
-                    echo '<li class="mobilLink" id="kijelentkezes"><a class="link" href="../PHP/kij.php">Kilépés</a></li>';
-                } else {
-                    echo '<li class="mobilLink" id="bejelentkezes"><a class="link" href="./reg.html">Belépés</a></li>';
-                    // header("Location: ./reg.html");
-                }
+                    if (isset($_COOKIE["admin"]))
+                    {
+                        if ($_COOKIE["admin"] == 1) 
+                        {
+                            echo '<li class="mobilLink"><a class="link" href="./fhlista.php">Felhasználók</a></li>';
+                        }
+                    }
+                    
+                    if (isset($_COOKIE["fhn"])) {
+                        echo '<li class="mobilLink" id="profil"><a class="link" href="./profil.php">Profil</a></li>';
+                        echo '<li class="mobilLink" id="kijelentkezes"><a class="link" href="../PHP/kij.php">Kilépés</a></li>';
+                    } else {
+                        echo '<li class="mobilLink" id="bejelentkezes"><a class="link" href="./reg.html">Belépés</a></li>';
+                        // header("Location: ./reg.html");
+                    }
 
                 ?>
             </ul>
