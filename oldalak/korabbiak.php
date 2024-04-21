@@ -1,20 +1,54 @@
 <?php
-if (isset($_POST["likebtn"])) {
+if (isset($_POST["like"])) {
+    // session_start();
     $index = $_POST["index"];
     $user = $_POST["like"];
-
-    $data = json_decode(file_get_contents("../JSON/meresek.json", true));
+    $data = array_reverse(json_decode(file_get_contents("../JSON/meresek.json"), true));
 
     if (in_array($_POST["like"], $data[$index]["likes"])) {
-        for ($i=0; $i < count($data["like"]); $i++) { 
-            if ($data["likes"][$i] == $user) {
-                unset($data["likes"], $i);
+        for ($i = 0; $i < count($data[$index]["likes"]); $i++) {
+            if ($data[$index]["likes"][$i] == $user) {
+                unset($data[$index]["likes"][$i]);
                 break;
             }
         }
+    } else {
+        for ($i = 0; $i < count($data[$index]["dislikes"]); $i++) {
+            if ($data[$index]["dislikes"][$i] == $user) {
+                unset($data[$index]["dislikes"][$i]);
+                break;
+            }
+        }
+        $data[$index]["likes"][] = $user;
     }
-    
+    file_put_contents("../JSON/meresek.json", json_encode(array_reverse($data), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+    header("Location: korabbiak.php");
+}
 
+if (isset($_POST["dislike"])) {
+    // session_start();
+    $index = $_POST["index"];
+    $user = $_POST["dislike"];
+    $data = array_reverse(json_decode(file_get_contents("../JSON/meresek.json"), true));
+
+    if (in_array($_POST["dislike"], $data[$index]["dislikes"])) {
+        for ($i = 0; $i < count($data[$index]["dislikes"]); $i++) {
+            if ($data[$index]["dislikes"][$i] == $user) {
+                unset($data[$index]["dislikes"][$i]);
+                break;
+            }
+        }
+    } else {
+        for ($i = 0; $i < count($data[$index]["likes"]); $i++) {
+            if ($data[$index]["likes"][$i] == $user) {
+                unset($data[$index]["likes"][$i]);
+                break;
+            }
+        }
+        $data[$index]["dislikes"][] = $user;
+    }
+    file_put_contents("../JSON/meresek.json", json_encode(array_reverse($data), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+    header("Location: korabbiak.php");
 }
 ?>
 
@@ -106,7 +140,14 @@ if (isset($_POST["likebtn"])) {
                 echo "<form method=\"post\">";
                 echo "<input type=\"number\" class=\"d-none\" name=\"index\" value=$i>";
                 echo "<input type=\"text\" class=\"d-none\" name=\"like\" value=$who>";
-                echo "<input type=\"submit\" class=\"likebtn\" name=\"likebtn\" value=\"Jó - $likes\">";
+                echo "<input type=\"submit\" class=\"likebtn";
+                for ($j = 0; $j < count($data[$i]["likes"]); $j++) {
+                    if ($data[$i]["likes"][$j] == $who) {
+                        echo " already";
+                        break;
+                    }
+                }
+                echo "\" name=\"likebtn\" value=\"Jó - $likes\">";
                 echo "</form>";
 
 
@@ -114,7 +155,14 @@ if (isset($_POST["likebtn"])) {
                 echo "<form method=\"post\">";
                 echo "<input type=\"number\" class=\"d-none\" name=\"index\" value=$i>";
                 echo "<input type=\"text\" class=\"d-none\" name=\"dislike\" value=\"$who\">";
-                echo "<input type=\"submit\" class=\"dislikebtn\" name=\"dislikebtn\" value=\"Nem jó - $dislikes\" data-index=\"$i\">";
+                echo "<input type=\"submit\" class=\"dislikebtn";
+                for ($j = 0; $j < count($data[$i]["dislikes"]); $j++) {
+                    if ($data[$i]["dislikes"][$j] == $who) {
+                        echo " already";
+                        break;
+                    }
+                }
+                echo "\" name=\"dislikebtn\" value=\"Nem jó - $dislikes\" data-index=\"$i\">";
                 echo "</form>";
                 echo "<br>";
                 $when = $data[$i]['when'];

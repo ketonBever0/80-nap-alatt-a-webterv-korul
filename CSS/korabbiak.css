@@ -57,3 +57,7 @@ form {
     margin: 2px;
     cursor: pointer;
 }
+
+.already {
+    border: 2px solid beige;
+}
