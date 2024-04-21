@@ -35,6 +35,7 @@ if (!password_verify($_POST["passb"],$data["pass"])) {
 setcookie('fhn', $data['fhn'], time() + 3600,'/');
 setcookie('neptun', $data['neptun'], time() + 3600,'/');
 setcookie('profilkep', $data['profilkep'], time() + 3600,'/');
+setcookie('admin', $data['admin'], time() + 3600,'/');
 $felhasznalonev = $_COOKIE["fhn"];
 echo "<script>console.log('$felhasznalonev')</script>";
 header("Location: ../oldalak/profil.php");

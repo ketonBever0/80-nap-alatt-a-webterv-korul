@@ -1,0 +1,47 @@
+.fhdoboz{
+    background-color: brown;
+    border-radius: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.kicsikepek{
+    width: 200px;
+    height: 200px;
+}
+
+.fhnev, .neptun{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+}
+
+.cim{
+    font-variant: small-caps;
+    text-decoration: underline;
+}
+
+.focim{
+    margin: 30px;
+    font-size: 7vh;
+}
+
+@media (max-width: 768px) {
+    .fhdoboz{
+        display: block;
+        text-align: center;
+    }
+
+    .focim{
+        font-size: xx-large;
+    }
+}

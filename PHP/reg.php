@@ -25,7 +25,8 @@
             'neptun' => trim($_POST["neptun"]),
             'pass' => password_hash(trim($_POST["pass"]),PASSWORD_DEFAULT),
             'passa' => password_hash(trim($_POST["passa"]),PASSWORD_DEFAULT),
-            'profilkep' => "profilpelda.webp"
+            'profilkep' => "profilpelda.webp",
+            'admin' => false
         );
     
         // A JSON adatok kiírása a fájlba
@@ -45,6 +46,7 @@
             setcookie('fhn', $data['fhn'], time() + 3600,'/');
             setcookie('neptun', $data['neptun'], time() + 3600,'/');
             setcookie('profilkep', $data['profilkep'], time() + 3600,'/');
+            setcookie('admin', $data['admin'], time() + 3600,'/');
             echo "<script>console.log(".$_COOKIE['fhn'].")</script>";
             //file_put_contents('../JSON/aktualisanBejelntkezett.json', $json_data);
             exit(); // Megszakítjuk a script végrehajtását
