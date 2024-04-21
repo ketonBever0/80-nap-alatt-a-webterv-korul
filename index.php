@@ -37,6 +37,16 @@
                     <li class="mobilLink"><a class="link" href="./oldalak/korabbiak.php">Korábbiak</a></li>
                     <li class="mobilLink"><a class="link">Statisztikák</a></li>
                     <?php
+                        if (isset($_COOKIE["admin"]))
+                        {
+                            if ($_COOKIE["admin"] == 1) 
+                            {
+                                echo '<li class="mobilLink"><a class="link" href="./oldalak/fhlista.php">Felhasználók</a></li>';
+                            }
+                        }
+
+                        
+
                         if (isset($_COOKIE["fhn"])) {
                             echo '<li class="mobilLink" id="profil"><a class="link" href="./oldalak/profil.php">Profil</a></li>';
                             echo '<li class="mobilLink" id="kijelentkezes"><a class="link" href="./PHP/kij.php">Kilépés</a></li>';
@@ -45,6 +55,8 @@
                             echo '<li class="mobilLink" id="bejelentkezes"><a class="link" href="./oldalak/reg.html">Belépés</a></li>';
                             //header("Location: ./reg.html");
                         }
+
+                        
                     
                     ?>
                 </ul>
