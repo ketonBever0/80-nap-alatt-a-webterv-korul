@@ -1,3 +1,23 @@
+<?php
+if (isset($_POST["likebtn"])) {
+    $index = $_POST["index"];
+    $user = $_POST["like"];
+
+    $data = json_decode(file_get_contents("../JSON/meresek.json", true));
+
+    if (in_array($_POST["like"], $data[$index]["likes"])) {
+        for ($i=0; $i < count($data["like"]); $i++) { 
+            if ($data["likes"][$i] == $user) {
+                unset($data["likes"], $i);
+                break;
+            }
+        }
+    }
+    
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -34,25 +54,23 @@
                 <li class="mobilLink"><a class="link" href="./szoszamolas.php">Felvitel</a></li>
                 <li class="mobilLink"><a class="link" href="./korabbiak.php">Korábbiak</a></li>
                 <li class="mobilLink"><a class="link">Statisztikák</a></li>
-                
-                
+
+
                 <?php
-                    if (isset($_COOKIE["fhn"])) {
-                        echo '<li class="mobilLink" id="profil"><a class="link" href="./profil.php">Profil</a></li>';
-                        echo '<li class="mobilLink" id="kijelentkezes"><a class="link" href="../PHP/kij.php">Kilépés</a></li>';
-                    }
-                    else {
-                        echo '<li class="mobilLink" id="bejelentkezes"><a class="link" href="./reg.html">Belépés</a></li>';
-                        header("Location: ./reg.html");
-                    }
-                 
-                ?>  
+                if (isset($_COOKIE["fhn"])) {
+                    echo '<li class="mobilLink" id="profil"><a class="link" href="./profil.php">Profil</a></li>';
+                    echo '<li class="mobilLink" id="kijelentkezes"><a class="link" href="../PHP/kij.php">Kilépés</a></li>';
+                } else {
+                    echo '<li class="mobilLink" id="bejelentkezes"><a class="link" href="./reg.html">Belépés</a></li>';
+                    // header("Location: ./reg.html");
+                }
+
+                ?>
             </ul>
         </nav>
     </header>
 
     <main>
-
         <h1>Korábbi számolások</h1>
 
         <div class="meresek">
@@ -78,16 +96,27 @@
                     echo "</li>";
                 }
                 echo "</ol>";
-                
+
                 $all = $data[$i]["all"];
                 echo "<p>Összesen: $all</p><br>";
 
                 $likes = count($data[$i]["likes"]);
-                echo "<button class=\"likebtn\" data-index=\"$i\" data-action=\"like\">Jó - $likes</button>";
-                $dislikes = count($data[$i]["dislikes"]);
-                echo "<button class=\"dislikebtn\" data-index=\"$i\" data-action=\"dislike\">Nem jó - $dislikes</button>";
-                echo "<br>";
+
                 $who = $data[$i]['who'];
+                echo "<form method=\"post\">";
+                echo "<input type=\"number\" class=\"d-none\" name=\"index\" value=$i>";
+                echo "<input type=\"text\" class=\"d-none\" name=\"like\" value=$who>";
+                echo "<input type=\"submit\" class=\"likebtn\" name=\"likebtn\" value=\"Jó - $likes\">";
+                echo "</form>";
+
+
+                $dislikes = count($data[$i]["dislikes"]);
+                echo "<form method=\"post\">";
+                echo "<input type=\"number\" class=\"d-none\" name=\"index\" value=$i>";
+                echo "<input type=\"text\" class=\"d-none\" name=\"dislike\" value=\"$who\">";
+                echo "<input type=\"submit\" class=\"dislikebtn\" name=\"dislikebtn\" value=\"Nem jó - $dislikes\" data-index=\"$i\">";
+                echo "</form>";
+                echo "<br>";
                 $when = $data[$i]['when'];
 
                 echo "számolta: $who<br>ekkor: $when";
