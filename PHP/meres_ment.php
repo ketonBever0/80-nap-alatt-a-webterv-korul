@@ -26,5 +26,5 @@ $data[] = array(
 file_put_contents($jsonFile, json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
 
-header("Location: http://localhost/wt_projekt/oldalak/korabbiak.php");
+header("Location: ../korabbiak.php");
 

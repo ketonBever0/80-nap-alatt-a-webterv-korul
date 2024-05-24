@@ -61,6 +61,7 @@ if (isset($_POST["dislike"])) {
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../CSS/korabbiak.css">
     <title>Korábbi mérések</title>
+    <script defer src="../JS/mobilmenu.js"></script>
 </head>
 
 <body>
